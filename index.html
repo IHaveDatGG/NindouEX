@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/NindouEX.loader.js";
       var config = {
-        dataUrl: buildUrl + "/5aff539138d071c07e138be42e0fcf5b.data",
-        frameworkUrl: buildUrl + "/284b9d634dae2533899bdbcc6f31efca.js",
-        codeUrl: buildUrl + "/f437c78b3b4426b9b6e924b25c5907c8.wasm",
+        dataUrl: buildUrl + "/0725710473b3b29291b76e2473e1ee00.data",
+        frameworkUrl: buildUrl + "/59d3e9173cd623c90a8f124e8866cfbf.js",
+        codeUrl: buildUrl + "/28688086fcd3ca227c45e676928f6a01.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Huang",
         productName: "NindouEX",
@@ -75,7 +75,7 @@
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      /*if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
 
         var meta = document.createElement('meta');
@@ -97,7 +97,11 @@
 
         canvas.style.width = "960px";
         canvas.style.height = "540px";
-      }
+      }*/
+
+      // test
+      canvas.style.width = window.screen.availWidth + "px";//"99vw";
+      canvas.style.height = window.screen.availHeight + "px";// "95vh";
 
       loadingBar.style.display = "block";
 
