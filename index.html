@@ -58,13 +58,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/NindouEX.loader.js";
       var config = {
-        dataUrl: buildUrl + "/0725710473b3b29291b76e2473e1ee00.data",
-        frameworkUrl: buildUrl + "/59d3e9173cd623c90a8f124e8866cfbf.js",
-        codeUrl: buildUrl + "/28688086fcd3ca227c45e676928f6a01.wasm",
+        dataUrl: buildUrl + "/aef609ecd9fd9c15aa481a84a90a16b9.data",
+        frameworkUrl: buildUrl + "/dbe04f28f60bf1932be9d7574f34cec1.js",
+        codeUrl: buildUrl + "/7f43d285f795107ec4f232366af5a1c6.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Huang",
         productName: "NindouEX",
-        productVersion: "Alpha 2.0",
+        productVersion: "Alpha 2.1",
         showBanner: unityShowBanner,
       };
 
@@ -75,7 +75,7 @@
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
 
-      /*if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
 
         var meta = document.createElement('meta');
@@ -90,18 +90,12 @@
 
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "540px";
-      }*/
-
-      // test
-      canvas.style.width = window.innerWidth + "px";//100vw"; //window.screen.availWidth + "px";
-      canvas.style.height = window.innerHeight + "px" //"92vh"; //window.screen.availHeight * 0.95 + "px";
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+      }
 
       loadingBar.style.display = "block";
 
@@ -109,7 +103,7 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
+          progressBarFull.style.width = "0%"//100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
